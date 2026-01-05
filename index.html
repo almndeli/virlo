@@ -53,7 +53,7 @@
       color:#fff;
     }
     .pill-text{font-size:24px;font-weight:900}
-    .pill-brand{font-size:30px;font-weight:900;opacity:.95}
+    .pill-brand{font-size:30px;font-weight:900}
 
     .hero{
       width:min(760px, 100%);
@@ -120,24 +120,78 @@
       font-weight:900;
       opacity:0;
       transition:.3s;
+      color:#a7ffca;
     }
     .status.show{opacity:1}
 
-    .footer{
+    .cards{
       width:min(700px, 100%);
       margin: 18px auto 0;
+      display:grid;
+      gap: 18px;
+    }
+
+    .card{
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      padding: 22px 18px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.28);
+      text-align:center;
+    }
+
+    .card h3{
+      margin: 0 0 10px;
+      font-size: 32px;
+      font-weight: 900;
+    }
+    .card p{
+      margin: 0;
+      color: rgba(238,244,255,.70);
+      line-height: 1.85;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .what{
+      width:min(700px, 100%);
+      margin: 18px auto 0;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      padding: 22px 18px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.28);
+      text-align:center;
+    }
+
+    .what h3{
+      margin: 0 0 14px;
+      font-size: 28px;
+      font-weight: 900;
+    }
+    .what ul{
+      list-style: disc;
+      padding: 0 22px 0 0;
+      text-align:right;
+      color: rgba(238,244,255,.75);
+      font-weight: 800;
+      line-height: 2;
+      font-size: 18px;
+    }
+
+    .footer{
+      width:min(700px, 100%);
+      margin: 16px auto 0;
       text-align:center;
       color: rgba(238,244,255,.45);
       font-weight: 900;
-      font-size: 14px;
+      font-size: 16px;
     }
     .footer a{
       color: inherit;
-      text-decoration:none;
-      margin: 0 8px;
-      opacity:.75;
+      text-decoration: underline;
+      margin: 0 6px;
     }
-    .footer a:hover{opacity:1}
   </style>
 </head>
 
@@ -151,30 +205,56 @@
 
   <section class="hero">
     <h1>
-      الترند ما ينتشر صدفة<br>
-      <span class="accent">Virlo</span> يشرح لك ليش
+      الترند ما ينتشر<br>
+      صدفة<br>
+      <span class="accent">Virlo</span> يشرح لك<br>
+      ليش
     </h1>
 
     <p class="sub">
       Virlo يساعد صُنّاع المحتوى والمسوقين يفهمون ليش هذا الترند انتشر
-      ويعطيك مؤشرات واضحة بدون تعقيد.
+      ويعطيك مؤشرات واضحة مثل النمو والتفاعل بدون تعقيد.
     </p>
 
     <form class="form" id="earlyAccessForm">
-      <input class="email-box" id="email" type="email" placeholder="اكتب ايميلك للتجربة" required />
+      <input class="email-box" id="email" type="email" placeholder="اكتب ايميلك" required />
       <button class="join-btn" type="submit">انضم</button>
-
-      <div class="status" id="status">✅ تم التسجيل</div>
+      <div class="status" id="status">✓ تم التسجيل</div>
     </form>
 
-    <div class="footer">
-      © Virlo — MVP<br><br>
-      <a href="privacy.html">سياسة الخصوصية</a>
-      |
-      <a href="terms.html">الشروط والأحكام</a>
+    <div class="cards">
+      <div class="card">
+        <h3>لصنّاع المحتوى</h3>
+        <p>اعرف وش تتصور قبل لا تضيع وقتك على فكرة ما تنتشر.</p>
+      </div>
+      <div class="card">
+        <h3>للمسوّقين</h3>
+        <p>اختصر وقت التحليل وركز على الفرص الحقيقية.</p>
+      </div>
+      <div class="card">
+        <h3>للعلامات التجارية</h3>
+        <p>ادخل الترند بذكاء بدل التقليد الأعمى.</p>
+      </div>
     </div>
-  </section>
 
+    <div class="what">
+      <h3>وش يسوي Virlo؟</h3>
+      <ul>
+        <li>يحلل الترندات المنتشرة</li>
+        <li>يقيس التفاعل والنمو</li>
+        <li>يشرح أسباب الانتشار</li>
+        <li>يساعدك تختار المحتوى الصح بالوقت الصح</li>
+      </ul>
+    </div>
+
+    <!-- ✅ الفوتر مع الديمو + الخصوصية -->
+    <div class="footer">
+      © تجريبي Virlo — MVP ·
+      <a href="demo.html">جرّب الديمو</a> ·
+      <a href="privacy.html">سياسة الخصوصية</a>
+    </div>
+
+  </section>
 </main>
 
 <script>
