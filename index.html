@@ -18,9 +18,8 @@
       --stroke: rgba(255,255,255,.10);
       --text:#eef4ff;
       --muted: rgba(238,244,255,.70);
+      --muted2: rgba(238,244,255,.52);
       --shadow: 0 30px 90px rgba(0,0,0,.55);
-      --blue1:#2563eb;
-      --blue2:#38bdf8;
     }
 
     *{box-sizing:border-box}
@@ -35,15 +34,12 @@
       min-height:100vh;
     }
 
-    a{color:inherit; text-decoration:none}
-
     .wrap{
       width:min(900px, 92vw);
       margin:0 auto;
       padding:26px 0 56px;
     }
 
-    /* الكبسولة */
     .hero-pill{
       width: min(760px, 100%);
       margin: 8px auto 22px;
@@ -57,9 +53,8 @@
       color:#fff;
     }
     .pill-text{font-size:24px;font-weight:900}
-    .pill-brand{font-size:30px;font-weight:900}
+    .pill-brand{font-size:30px;font-weight:900;opacity:.95}
 
-    /* الكرت الرئيسي */
     .hero{
       width:min(760px, 100%);
       margin:0 auto;
@@ -67,48 +62,52 @@
       border:1px solid var(--stroke);
       background: linear-gradient(180deg, var(--panel), var(--panel2));
       box-shadow: var(--shadow);
-      padding: 30px 22px;
-      text-align:center;
+      padding: 30px 22px 22px;
     }
 
     h1{
       margin: 6px 0 14px;
+      text-align:center;
       font-size: clamp(30px, 5vw, 46px);
       font-weight: 900;
-      line-height:1.2;
+      line-height:1.15;
     }
     .accent{color:#7fb4ff}
 
     .sub{
       margin: 0 auto 22px;
-      max-width:620px;
+      text-align:center;
+      width:min(620px, 100%);
       color: var(--muted);
-      line-height:1.9;
+      line-height:1.85;
       font-size: 16px;
-      font-weight:700;
     }
 
-    /* فورم */
-    .form{max-width:620px; margin:0 auto}
-    .email{
+    .form{
+      width:min(620px, 100%);
+      margin: 0 auto 18px;
+      text-align:center;
+    }
+
+    .email-box{
       width:100%;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.10);
       background: rgba(4,10,22,.55);
-      padding:16px 18px;
-      color:var(--text);
-      font-size:18px;
+      padding: 16px 18px;
+      color: var(--text);
+      font-size: 18px;
       outline:none;
     }
 
-    .btn{
+    .join-btn{
       width:100%;
-      margin-top:12px;
-      padding:16px;
+      margin-top: 12px;
+      padding: 16px 18px;
       border:none;
-      border-radius:999px;
-      font-weight:900;
-      font-size:18px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 18px;
       cursor:pointer;
       color:#071022;
       background: linear-gradient(180deg, #93c5fd, #3b82f6);
@@ -116,37 +115,26 @@
     }
 
     .status{
-      margin-top:10px;
-      font-weight:900;
-      color:#a7ffca;
-      display:none;
-    }
-    .status.show{display:block}
-
-    /* زر الديمو */
-    .demo-btn{
-      position:fixed;
-      bottom:18px;
-      right:18px;
-      padding:12px 16px;
-      border-radius:999px;
-      background: rgba(77,163,255,.20);
-      border:1px solid rgba(77,163,255,.55);
-      font-weight:900;
-      box-shadow:0 12px 40px rgba(0,0,0,.35);
-      z-index:999;
-    }
-
-    /* الفوتر */
-    .footer{
-      margin-top:26px;
+      margin-top: 10px;
       text-align:center;
-      color: rgba(238,244,255,.55);
-      font-weight:800;
-      font-size:14px;
+      font-weight:900;
+      opacity:0;
+      transition:.3s;
+    }
+    .status.show{opacity:1}
+
+    .footer{
+      width:min(700px, 100%);
+      margin: 18px auto 0;
+      text-align:center;
+      color: rgba(238,244,255,.45);
+      font-weight: 900;
+      font-size: 14px;
     }
     .footer a{
-      margin:0 8px;
+      color: inherit;
+      text-decoration:none;
+      margin: 0 8px;
       opacity:.75;
     }
     .footer a:hover{opacity:1}
@@ -154,10 +142,8 @@
 </head>
 
 <body>
-
-<a class="demo-btn" href="demo.html">جرّب الديمو</a>
-
 <main class="wrap">
+
   <div class="hero-pill">
     <span class="pill-text">افهم الترند قبل ما يفوتك</span>
     <span class="pill-brand">Virlo</span>
@@ -170,30 +156,32 @@
     </h1>
 
     <p class="sub">
-      Virlo يساعد صُنّاع المحتوى والمسوقين يفهمون سبب انتشار الترند
+      Virlo يساعد صُنّاع المحتوى والمسوقين يفهمون ليش هذا الترند انتشر
       ويعطيك مؤشرات واضحة بدون تعقيد.
     </p>
 
-    <form class="form" id="form">
-      <input id="email" class="email" type="email" placeholder="اكتب ايميلك للتجربة" required />
-      <button class="btn" type="submit">انضم</button>
-      <div id="status" class="status">✅ تم التسجيل بنجاح</div>
+    <form class="form" id="earlyAccessForm">
+      <input class="email-box" id="email" type="email" placeholder="اكتب ايميلك للتجربة" required />
+      <button class="join-btn" type="submit">انضم</button>
+
+      <div class="status" id="status">✅ تم التسجيل</div>
     </form>
+
+    <div class="footer">
+      © Virlo — MVP<br><br>
+      <a href="privacy.html">سياسة الخصوصية</a>
+      |
+      <a href="terms.html">الشروط والأحكام</a>
+    </div>
   </section>
 
-  <div class="footer">
-    © Virlo — MVP<br><br>
-    <a href="privacy.html">سياسة الخصوصية</a>
-    |
-    <a href="terms.html">الشروط والأحكام</a>
-  </div>
 </main>
 
 <script>
   const WEB_APP_URL =
     "https://script.google.com/macros/s/AKfycbyspyjOCoZneLsFSvvbjquMEhQaXS05S5NLMR2hdcH_Q0-t_RMjs0aQIyPRDpkSk5x3/exec";
 
-  const form = document.getElementById("form");
+  const form = document.getElementById("earlyAccessForm");
   const emailInput = document.getElementById("email");
   const statusEl = document.getElementById("status");
 
@@ -207,7 +195,7 @@
       statusEl.classList.add("show");
       emailInput.value = "";
     } catch {
-      statusEl.textContent = "⚠️ حصل خطأ، جرّب مرة ثانية";
+      statusEl.textContent = "⚠️ حصل خطأ";
       statusEl.classList.add("show");
     }
   });
