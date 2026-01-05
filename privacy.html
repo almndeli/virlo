@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virlo — سياسة الخصوصية</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0:#050a14;
+      --bg1:#071126;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.03);
+      --stroke: rgba(255,255,255,.10);
+      --text:#eef4ff;
+      --muted: rgba(238,244,255,.72);
+      --muted2: rgba(238,244,255,.55);
+      --shadow: 0 30px 90px rgba(0,0,0,.55);
+      --blue1:#2563eb;
+      --blue2:#38bdf8;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 420px at 50% 120px, rgba(37,99,235,.28), transparent 55%),
+        radial-gradient(700px 380px at 75% 220px, rgba(34,211,238,.14), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      min-height:100vh;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{width:min(900px, 92vw); margin:0 auto; padding:26px 0 56px;}
+
+    .topbar{
+      width:min(760px, 100%);
+      margin: 8px auto 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; font-size:18px; color:rgba(238,244,255,.92);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background: linear-gradient(135deg, var(--blue1), var(--blue2));
+      box-shadow:0 0 0 6px rgba(37,99,235,.18);
+    }
+    .btn{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight:900;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      transition: transform .08s ease, filter .2s ease;
+    }
+    .btn:hover{filter:brightness(1.06)}
+    .btn:active{transform: translateY(1px)}
+
+    .hero-pill{
+      width: min(760px, 100%);
+      margin: 0 auto 14px;
+      padding: 16px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-radius:999px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      box-shadow: 0 22px 55px rgba(37,99,235,.35);
+      color:#fff;
+    }
+    .pill-text{font-size:20px;font-weight:900}
+    .pill-brand{font-size:26px;font-weight:900;opacity:.95}
+
+    .panel{
+      width:min(760px, 100%);
+      margin:0 auto;
+      border-radius:26px;
+      border:1px solid var(--stroke);
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    h1{
+      margin: 6px 0 10px;
+      text-align:center;
+      font-size: clamp(26px, 4.2vw, 36px);
+      font-weight: 900;
+      line-height:1.2;
+    }
+
+    .sub{
+      margin: 0 auto 18px;
+      text-align:center;
+      width:min(680px, 100%);
+      color: var(--muted);
+      line-height:1.9;
+      font-size: 15px;
+      font-weight:700;
+    }
+
+    .content{
+      width:min(700px, 100%);
+      margin: 0 auto;
+      color: rgba(238,244,255,.80);
+      font-weight:700;
+      line-height: 2.0;
+      font-size: 16px;
+    }
+    .content h2{
+      margin: 18px 0 8px;
+      font-size: 18px;
+      font-weight: 900;
+      color: rgba(238,244,255,.92);
+    }
+    .content ul{
+      margin: 8px 0 0;
+      padding: 0 20px 0 0;
+    }
+    .content li{margin: 6px 0}
+    .note{
+      margin-top: 14px;
+      padding: 14px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+      color: rgba(238,244,255,.75);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .footer{
+      width:min(760px, 100%);
+      margin: 14px auto 0;
+      text-align:center;
+      color: rgba(238,244,255,.45);
+      font-weight: 900;
+      font-size: 14px;
+      padding: 8px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Virlo</div>
+      <a class="btn" href="index.html">رجوع</a>
+    </div>
+
+    <div class="hero-pill">
+      <span class="pill-text">سياسة الخصوصية</span>
+      <span class="pill-brand">Virlo</span>
+    </div>
+
+    <section class="panel">
+      <h1>سياسة الخصوصية</h1>
+      <p class="sub">
+        نحترم خصوصيتك. هذه السياسة تشرح بشكل واضح كيف نتعامل مع بياناتك في Virlo.
+      </p>
+
+      <div class="content">
+        <h2>1) البيانات التي نجمعها</h2>
+        <ul>
+          <li><strong>البريد الإلكتروني:</strong> عندما تسجّل في قائمة الوصول المبكر.</li>
+          <li><strong>بيانات تقنية بسيطة:</strong> قد يتم تسجيل معلومات عامة مثل نوع المتصفح لأغراض أمنية/تحليلية (إن وُجدت على الاستضافة).</li>
+        </ul>
+
+        <h2>2) لماذا نجمعها؟</h2>
+        <ul>
+          <li>لإرسال تحديثات الوصول المبكر وإشعارك عند توفر النسخة التجريبية.</li>
+          <li>لتحسين التجربة وفهم الاستخدام بشكل عام.</li>
+        </ul>
+
+        <h2>3) مشاركة البيانات</h2>
+        <ul>
+          <li>لا نبيع بياناتك ولا نشاركها لأغراض إعلانية.</li>
+          <li>قد نستخدم خدمات طرف ثالث ضرورية لتشغيل الخدمة (مثل التخزين/التحليلات) عند الحاجة، وبأقل قدر ممكن.</li>
+        </ul>
+
+        <h2>4) مدة الاحتفاظ بالبيانات</h2>
+        <ul>
+          <li>نحتفظ بالبريد الإلكتروني طالما كان ذلك لازمًا لإدارة الوصول المبكر وإرسال التحديثات، أو حتى تطلب حذفه.</li>
+        </ul>
+
+        <h2>5) حقوقك</h2>
+        <ul>
+          <li>يمكنك طلب حذف بريدك الإلكتروني من قائمة الانتظار في أي وقت.</li>
+          <li>يمكنك طلب معرفة ما إذا كنا نحتفظ ببياناتك الأساسية (مثل البريد الإلكتروني).</li>
+        </ul>
+
+        <h2>6) الأمان</h2>
+        <ul>
+          <li>نستخدم إجراءات مناسبة لحماية البيانات من الوصول غير المصرح به.</li>
+          <li>رغم ذلك، لا توجد طريقة نقل/تخزين 100% مضمونة.</li>
+        </ul>
+
+        <h2>7) التواصل</h2>
+        <p>
+          إذا عندك أي استفسار أو طلب متعلق بالخصوصية، تواصل معنا عبر البريد:
+          <strong>support@virlo.app</strong>
+          (غيّر الإيميل إذا عندك إيميل رسمي مختلف)
+        </p>
+
+        <div class="note">
+          آخر تحديث: <strong>يناير 2026</strong>. قد نقوم بتحديث هذه السياسة عند الحاجة، وسيتم نشر النسخة المحدثة هنا.
+        </div>
+      </div>
+
+      <div class="footer">© Virlo — Privacy</div>
+    </section>
+  </main>
+</body>
+</html>
